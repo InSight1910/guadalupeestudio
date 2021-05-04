@@ -1,0 +1,80 @@
+.back-site {
+	background-color: #2970ec;
+}
+.title {
+	font-family: "Bodoni Std Poster";
+	font-weight: bolder;
+	color: #98f4e5;
+	font-size: 5rem;
+}
+.p-body {
+	font-size: 2rem;
+	color: #fff;
+}
+.form-align {
+	margin-left: 33rem;
+}
+.input {
+	font-size: 1.5rem !important;
+	border-radius: 1rem !important;
+	border: none !important;
+}
+.input::placeholder {
+	color: #c9b99e !important;
+	text-align: center;
+	font-style: italic;
+}
+.button {
+	padding: 0.2rem 7rem !important;
+	background-color: #98f4e5 !important;
+	color: #2970ec !important;
+	border-radius: 1rem !important;
+	font-size: 1.5rem !important;
+}
+.link {
+	color: #fff;
+}
+.w-10 {
+	width: 4% !important;
+}
+@media (max-width: 576px) {
+	.title {
+		font-size: 2.5rem !important;
+	}
+	.p-body {
+		font-size: 1.3rem;
+	}
+	.logo {
+		width: 50%;
+	}
+}
+
+@media (min-width: 576px) {
+	.title {
+		font-size: 3.5rem !important;
+	}
+	.logo {
+		width: 40%;
+	}
+}
+
+@media (min-width: 768px) {
+	.title {
+		font-size: 4rem !important;
+	}
+	.logo {
+		width: 30%;
+	}
+}
+
+@media (min-width: 992px) {
+	.logo {
+		width: 20%;
+	}
+}
+
+@media (min-width: 1200px) {
+}
+
+@media (min-width: 1400px) {
+}
