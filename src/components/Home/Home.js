@@ -1,25 +1,53 @@
 import "./Home.css";
 
 import logo from "../../assets/Logo.svg";
-import instagram from "../../assets/ICO-IG.svg";
-import facebook from "../../assets/ICO-FB.svg";
-import email from "../../assets/ICO-Mail.svg";
+import footer from "./footerObject";
 
-import { Image, Row, Col, Container, Form, Button } from "react-bootstrap";
+import {
+	Image,
+	Row,
+	Col,
+	Container,
+	Form,
+	Button,
+	Alert,
+} from "react-bootstrap";
 import axios from "axios";
 
-import React, { useRef } from "react";
+import React, { useState } from "react";
 
 function Home() {
-	const name = useRef("");
-	const email = useRef("");
+	const [name, setName] = useState("");
+	const [email, setEmail] = useState("");
+	const [show, setShow] = useState(false);
+	const [validated, setValidated] = useState(false);
 	const url = "http://localhost:8000/";
 	const uploadUser = async (data) => {
-		console.log(data);
-		axios.post(url, data).then((res) => {
-			console.log(res.data);
+		await axios.post(url, data).then((res) => {
+			if (!res.data.error) {
+				setShow(true);
+				setTimeout(() => setShow(false), 1500);
+			}
 		});
 	};
+
+	const handleOnChangeName = (e) => {
+		setName(e.target.value);
+	};
+	const handleOnChangeEmail = (e) => {
+		setEmail(e.target.value);
+	};
+	const handleOnClick = async (e) => {
+		const form = e.currentTarget;
+		if (form.checkValidity() === false) {
+			e.stopPropagation();
+		}
+		setValidated(true);
+		if (validated) {
+			await uploadUser({ name, email });
+		}
+	};
+
 	return (
 		<Container fluid>
 			<Row xl={1} lg={1} md={1} sm={1} xs={1}>
@@ -38,42 +66,41 @@ function Home() {
 					<Row>
 						<Col></Col>
 						<Col className="w-75">
-							<Form>
+							<Form noValidate validated={validated}>
 								<Form.Row>
 									<Col>
 										<Form.Control
 											required
 											type="text"
 											placeholder="(Nombre)"
-											ref={name}
 											className="input"
+											onChange={handleOnChangeName}
 										></Form.Control>
+										<Form.Control.Feedback></Form.Control.Feedback>
 									</Col>
 									<Col>
 										<Form.Control
 											required
 											type="email"
 											placeholder="(Email)"
-											ref={email}
 											className="input"
+											onChange={handleOnChangeEmail}
 										></Form.Control>
 									</Col>
 								</Form.Row>
 								<Button
 									className="button mt-4"
 									type="button"
-									onClick={async () => {
-										const user = {
-											name: name.current.value,
-											email: email.current.value,
-										};
-										console.log(user);
-										await uploadUser(user);
-									}}
+									onClick={handleOnClick}
 								>
 									Enviar
 								</Button>
 							</Form>
+							<Alert show={show} variant="success">
+								Tus datos se han registrado con exito, te
+								enviaremos un correo solo cuando la web este
+								activa
+							</Alert>
 						</Col>
 						<Col></Col>
 					</Row>
@@ -81,26 +108,24 @@ function Home() {
 					<Row className="mt-4 mb-4">
 						<Col></Col>
 						<Col xl={6}>
-							<Image
-								fluid
-								src={instagram}
-								className="w-10 "
-							></Image>
-							<a href="" className="link ml-3 mr-5 font-italic">
-								@guadalupe_estudio
-							</a>
-							<Image
-								fluid
-								src={facebook}
-								className="w-10 "
-							></Image>
-							<a href="" className="link ml-3 mr-5 font-italic">
-								@guadalupe.estudio
-							</a>
-							<Image fluid src={email} className="w-10 "></Image>
-							<a href="" className="link ml-3 mr-5 font-italic">
-								hola@guadalupeestudio.cl
-							</a>
+							{footer.map((element) => {
+								return (
+									<>
+										<Image
+											key={element.key}
+											fluid
+											src={element.img.src}
+											className={element.img.className}
+										></Image>
+										<a
+											href={element.a.href}
+											className={element.a.className}
+										>
+											{element.a.text}
+										</a>
+									</>
+								);
+							})}
 						</Col>
 						<Col></Col>
 					</Row>
