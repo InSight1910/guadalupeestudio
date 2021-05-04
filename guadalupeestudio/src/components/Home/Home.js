@@ -115,12 +115,13 @@ function Home() {
 								return (
 									<>
 										<Image
-											key={element.key}
+											key={element.img.key}
 											fluid
 											src={element.img.src}
 											className={element.img.className}
 										></Image>
 										<a
+											key={element.a.key}
 											href={element.a.href}
 											className={element.a.className}
 										>

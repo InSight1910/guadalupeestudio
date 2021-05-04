@@ -1,6 +1,8 @@
 const express = require("express");
 const cors = require("cors");
-const { uri, port } = require("../config");
+const dotenv = require("dotenv").config();
+
+const { port } = require("../config");
 require("./database");
 
 const app = express();

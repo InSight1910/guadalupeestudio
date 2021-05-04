@@ -1,5 +1,4 @@
 module.exports = {
-	uri:
-		"mongodb+srv://InSight:Amanda1910@cluster0.hcnco.mongodb.net/guadalupeestudio?retryWrites=true&w=majority",
-	port: 8000,
+	uri: process.env.MONGODB_URI,
+	port: process.env.PORT,
 };
