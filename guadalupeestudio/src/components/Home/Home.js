@@ -42,9 +42,12 @@ function Home() {
 		if (form.checkValidity() === false) {
 			e.stopPropagation();
 		}
-		setValidated(true);
-		if (validated) {
-			await uploadUser({ name, email });
+		if (email.includes("@")) {
+			setValidated(true);
+			uploadUser({
+				name: name.toLowerCase(),
+				email: email.toLowerCase(),
+			});
 		}
 	};
 
