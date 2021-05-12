@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/static/css/main.2e49001b.chunk.css",
+    "main.js": "/static/js/main.43c506ea.chunk.js",
+    "main.js.map": "/static/js/main.43c506ea.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.287af34a.js",
+    "runtime-main.js.map": "/static/js/runtime-main.287af34a.js.map",
+    "static/css/2.4c97ca4f.chunk.css": "/static/css/2.4c97ca4f.chunk.css",
+    "static/js/2.89235edd.chunk.js": "/static/js/2.89235edd.chunk.js",
+    "static/js/2.89235edd.chunk.js.map": "/static/js/2.89235edd.chunk.js.map",
+    "static/js/3.5aa55df3.chunk.js": "/static/js/3.5aa55df3.chunk.js",
+    "static/js/3.5aa55df3.chunk.js.map": "/static/js/3.5aa55df3.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.4c97ca4f.chunk.css.map": "/static/css/2.4c97ca4f.chunk.css.map",
+    "static/css/main.2e49001b.chunk.css.map": "/static/css/main.2e49001b.chunk.css.map",
+    "static/js/2.89235edd.chunk.js.LICENSE.txt": "/static/js/2.89235edd.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/static/media/LatinaEssential-MediumIt.81077756.otf",
+    "static/media/ICO-FB-hover.bc8a3d67.svg": "/static/media/ICO-FB-hover.bc8a3d67.svg",
+    "static/media/ICO-FB.55bfb621.svg": "/static/media/ICO-FB.55bfb621.svg",
+    "static/media/ICO-IG-hover.25a7aa02.svg": "/static/media/ICO-IG-hover.25a7aa02.svg",
+    "static/media/ICO-IG.35d1e896.svg": "/static/media/ICO-IG.35d1e896.svg",
+    "static/media/ICO-Mail-hover.94cfaff5.svg": "/static/media/ICO-Mail-hover.94cfaff5.svg",
+    "static/media/ICO-Mail.ed176ae2.svg": "/static/media/ICO-Mail.ed176ae2.svg",
+    "static/media/Logo.e7698d6c.svg": "/static/media/Logo.e7698d6c.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.287af34a.js",
+    "static/css/2.4c97ca4f.chunk.css",
+    "static/js/2.89235edd.chunk.js",
+    "static/css/main.2e49001b.chunk.css",
+    "static/js/main.43c506ea.chunk.js"
+  ]
+}
