@@ -21,14 +21,22 @@ function Home() {
 	const [email, setEmail] = useState("");
 	const [show, setShow] = useState(false);
 	const [validated, setValidated] = useState(false);
+	const [sendError, setSendError] = useState(false);
 	const url = "http://localhost:8000/";
 	const uploadUser = async (data) => {
-		await axios.post(url, data).then((res) => {
-			if (!res.data.error) {
-				setShow(true);
-				setTimeout(() => setShow(false), 1500);
-			}
-		});
+		await axios
+			.post(url, data)
+			.then((res) => {
+				console.log(res.data);
+				if (!res.data.error) {
+					setShow(true);
+					setTimeout(() => setShow(false), 2000);
+				}
+			})
+			.catch((e) => {
+				setSendError(true);
+				setTimeout(() => setSendError(false), 2000);
+			});
 	};
 
 	const handleOnChangeName = (e) => {
@@ -43,12 +51,18 @@ function Home() {
 			e.stopPropagation();
 		}
 		if (email.includes("@")) {
-			setValidated(true);
 			uploadUser({
 				name: name.toLowerCase(),
 				email: email.toLowerCase(),
 			});
 		}
+		setValidated(true);
+	};
+	const handleMouseOver = (e, element) => {
+		e.target.src = element.img.srcHover;
+	};
+	const handleMouseOut = (e, element) => {
+		e.target.src = element.img.src;
 	};
 
 	return (
@@ -58,72 +72,36 @@ function Home() {
 					<Image fluid src={logo} className="mt-5 mb-5 logo"></Image>
 				</Col>
 				<Col className="back-site text-center m-0">
-					<h2 className="title mt-3">
+					<h2 className="title mt-5">
 						Nuestra Web está <br></br> en proceso...
 					</h2>
-					<p className="p-body">
+					<p className="p-body mt-5">
 						Pero quédate cerca, el lanzamiento será pronto.<br></br>
-						Deja tus datos y te avisamos!
+						Mientras tanto ¡Conversemos!
 					</p>
 
-					<Row>
-						<Col></Col>
-						<Col className="w-75">
-							<Form noValidate validated={validated}>
-								<Form.Row>
-									<Col>
-										<Form.Control
-											required
-											type="text"
-											placeholder="(Nombre)"
-											className="input"
-											onChange={handleOnChangeName}
-										></Form.Control>
-										<Form.Control.Feedback></Form.Control.Feedback>
-									</Col>
-									<Col>
-										<Form.Control
-											required
-											type="email"
-											placeholder="(Email)"
-											className="input"
-											onChange={handleOnChangeEmail}
-										></Form.Control>
-									</Col>
-								</Form.Row>
-								<Button
-									className="button mt-4"
-									type="button"
-									onClick={handleOnClick}
-								>
-									Enviar
-								</Button>
-							</Form>
-							<Alert show={show} variant="success">
-								Tus datos se han registrado con exito, te
-								enviaremos un correo solo cuando la web este
-								activa
-							</Alert>
-						</Col>
-						<Col></Col>
-					</Row>
-
-					<Row className="mt-4 mb-4">
+					<Row className="mt-5 mb-5">
 						<Col></Col>
 						<Col xl={6}>
-							{footer.map((element) => {
+							{footer.map((element, index) => {
 								return (
 									<>
 										<Image
-											key={element.img.key}
 											fluid
 											src={element.img.src}
 											className={element.img.className}
+											onMouseOver={(e) =>
+												handleMouseOver(e, element)
+											}
+											onMouseOut={(e) =>
+												handleMouseOut(e, element)
+											}
 										></Image>
 										<a
-											key={element.a.key}
 											href={element.a.href}
 											className={element.a.className}
+											target="_blank"
+											rel="noopener noreferrer nofollow"
 										>
 											{element.a.text}
 										</a>
