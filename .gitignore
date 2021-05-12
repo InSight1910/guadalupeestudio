@@ -105,6 +105,3 @@ dist
 
 # Config file
 config.js
-./guadalupeestudio/build/
-./guadalupeestudio/node_modules/
-./server/node_modules/
