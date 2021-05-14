@@ -7,10 +7,14 @@ import mailHover from "../../assets/ICO-Mail-hover.svg";
 
 const object = [
 	{
+		col: {
+			className: "mt-sm-5 text-lg-right",
+			xl: 4,
+		},
 		img: {
 			src: instagram,
 			srcHover: instagramHover,
-			className: "w-6",
+			className: "w-lg-10 w-sm-7 w-md-6",
 		},
 		a: {
 			href: "https://www.instagram.com/guadalupe_estudio/",
@@ -19,10 +23,14 @@ const object = [
 		},
 	},
 	{
+		col: {
+			className: "mt-sm-5",
+			xl: 4,
+		},
 		img: {
 			src: facebook,
 			srcHover: facebookHover,
-			className: "w-6",
+			className: "w-lg-10 w-sm-7 w-md-6",
 		},
 		a: {
 			href: "https://www.facebook.com/guadalupe.estudio",
@@ -31,10 +39,14 @@ const object = [
 		},
 	},
 	{
+		col: {
+			className: "mt-sm-5 text-lg-left",
+			xl: 4,
+		},
 		img: {
 			src: mail,
 			srcHover: mailHover,
-			className: "w-6",
+			className: "w-lg-10 w-sm-7 w-md-6",
 		},
 		a: {
 			href: "mailto:hola@guadalupestudio.cl",

@@ -102,3 +102,9 @@ br::selection {
 }
 @media (min-width: 1400px) {
 }
+
+@media (min-width: var("--breakpoint-xs")) {
+	.back-site {
+		background-color: black !important;
+	}
+}

@@ -1,0 +1,152 @@
+html {
+	font-size: 62.5%;
+}
+.w-6 {
+	width: 6% !important;
+}
+.w-10 {
+	width: 10% !important;
+}
+.w-15 {
+	width: 15% !important;
+}
+.w-20 {
+	width: 20% !important;
+}
+.w-35 {
+	width: 35% !important;
+}
+.w-55 {
+	width: 55% !important;
+}
+.w-60 {
+	width: 60% !important;
+}
+
+@media (min-width: 576px) {
+	.w-sm-6 {
+		width: 6% !important;
+	}
+	.w-sm-7 {
+		width: 7% !important;
+	}
+	.w-sm-10 {
+		width: 10% !important;
+	}
+	.w-sm-15 {
+		width: 15% !important;
+	}
+	.w-sm-20 {
+		width: 20% !important;
+	}
+	.w-sm-35 {
+		width: 35% !important;
+	}
+	.w-sm-40 {
+		width: 40% !important;
+	}
+	.w-sm-55 {
+		width: 55% !important;
+	}
+	.w-sm-60 {
+		width: 60% !important;
+	}
+}
+@media (min-width: 768px) {
+	.w-md-6 {
+		width: 6% !important;
+	}
+	.w-md-10 {
+		width: 10% !important;
+	}
+	.w-md-15 {
+		width: 15% !important;
+	}
+	.w-md-20 {
+		width: 20% !important;
+	}
+	.w-md-35 {
+		width: 35% !important;
+	}
+	.w-md-55 {
+		width: 55% !important;
+	}
+	.w-md-60 {
+		width: 60% !important;
+	}
+}
+@media (min-width: 992px) {
+	.w-lg-6 {
+		width: 6% !important;
+	}
+	.w-lg-10 {
+		width: 10% !important;
+	}
+	.w-lg-15 {
+		width: 15% !important;
+	}
+	.w-lg-20 {
+		width: 20% !important;
+	}
+	.w-lg-25 {
+		width: 25% !important;
+	}
+	.w-lg-35 {
+		width: 35% !important;
+	}
+	.w-lg-55 {
+		width: 55% !important;
+	}
+	.w-lg-60 {
+		width: 60% !important;
+	}
+	.w-lg-75 {
+		width: 76% !important;
+	}
+}
+@media (min-width: 1200px) {
+	.w-xl-6 {
+		width: 6% !important;
+	}
+	.w-xl-10 {
+		width: 10% !important;
+	}
+	.w-xl-15 {
+		width: 15% !important;
+	}
+	.w-xl-20 {
+		width: 20% !important;
+	}
+	.w-xl-35 {
+		width: 35% !important;
+	}
+	.w-xl-55 {
+		width: 55% !important;
+	}
+	.w-xl-60 {
+		width: 60% !important;
+	}
+	.w-xl-65 {
+		width: 76% !important;
+	}
+	.w-xl-75 {
+		width: 76% !important;
+	}
+}
+
+@font-face {
+	font-family: "Bodoni Std Poster";
+	src: url("./assets/Fonts/BodoniStd-Poster.otf");
+}
+@font-face {
+	font-family: "Latina Essential Light It";
+	src: url("./assets/Fonts/LatinaEssential-LightIt.otf");
+}
+@font-face {
+	font-family: "Latina Essential Medium";
+	src: url("./assets/Fonts/LatinaEssential-Medium.otf");
+}
+@font-face {
+	font-family: "Latina Essential Medium It";
+	src: url("./assets/Fonts/LatinaEssential-MediumIt.otf");
+}
